@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Погода</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<link rel="shortcut icon" href="https://cdn-icons-png.flaticon.com/512/5538/5538410.png" type="image/png">
+
+<body>
+
+  <div class="app">
+
+    <!-- Поиск -->
+    <div class="search-box glass">
+      <input type="text" id="cityInput" placeholder="Введите город...">
+      <button id="searchBtn">🔍</button>
+    </div>
+
+    <!-- Лоадер -->
+    <div id="loader" class="loader hidden"></div>
+
+    <!-- Ошибка -->
+    <div id="error" class="error hidden"></div>
+
+    <!-- Результат -->
+    <div id="result" class="result hidden glass">
+
+      <!-- Текущая погода -->
+      <div class="current">
+
+        <h2 id="cityName" class="city-name">Город</h2>
+
+        <div class="weather-now">
+          <div class="emoji" id="weatherEmoji">❔</div>
+          <div class="temp-block">
+            <span id="temperature" class="temperature">--°C</span>
+            <span id="weatherText" class="weather-text">Описание</span>
+            <span id="timezone" class="timezone">Часовой пояс</span>
+          </div>
+        </div>
+
+        <div class="extra">
+          <div class="extra-item">
+            💧 <span id="humidity">--</span>%
+          </div>
+          <div class="extra-item">
+            💨 <span id="wind">--</span> м/с
+          </div>
+        </div>
+
+        <div class="updated">Обновлено: <span id="updated">--</span></div>
+
+      </div>
+ <!-- почасавой прогноз-->
+      <h3 class="forecast-title">Почасовой прогноз</h3>
+<div id="hourly" class="hourly"></div>
+
+
+      <!-- Прогноз на 5 дней -->
+      <h3 class="forecast-title">Прогноз на 5 дней</h3>
+      <div id="forecast" class="forecast"></div>
+
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
